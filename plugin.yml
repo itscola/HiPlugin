@@ -1,0 +1,12 @@
+name: HiPlugin
+version: 3.1
+main: top.whitecola.HiPlugin
+author: [White_cola,Chloe030120]
+commands:
+  hip:
+    usage: /hip <command> [args] ...
+permissions:
+  hiplugin.sayhi:
+    default: op
+  hiplugin.example:
+    default: op
