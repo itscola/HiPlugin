@@ -14,7 +14,7 @@ public class HiThread {
         this.waitingSpace = waitingSpace;
         th = new Thread(()->{
             while (true){
-                synchronized (new Object()){
+                synchronized (this){
                     try {
                         for (Runnable th : tasks) {
                             th.run();
