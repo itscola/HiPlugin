@@ -1,6 +1,7 @@
 package top.whitecola.confighandler;
 
-import org.jetbrains.annotations.NotNull;
+
+import com.sun.istack.internal.NotNull;
 
 import java.util.concurrent.ConcurrentHashMap;
 

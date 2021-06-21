@@ -7,6 +7,7 @@ public class HiWorld {
     public HiWorld(World world){
         this.world = world;
     }
+
     public void loadChunk(){
 
     }

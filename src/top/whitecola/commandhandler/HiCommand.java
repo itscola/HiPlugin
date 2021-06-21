@@ -74,11 +74,15 @@ public class HiCommand implements TabExecutor {
     }
 
     public void addCommand(ICommand icom){
-        if(!isALegalCommand(icom)){
-            throw new IllegalClassException("§a[HiPlugin]"+getCommandName(icom)+"类,没有@ItsCommand注释,无法注册! 来源: "+pl.getName()+"插件.");
+        try {
+            if (!isALegalCommand(icom)) {
+                throw new IllegalClassException("§a[HiPlugin]" + getCommandName(icom) + "类,没有@ItsCommand注释,无法注册! 来源: " + pl.getName() + "插件.");
+            }
+            commands.add(icom);
+            System.out.println("§a[HiPlugin]" + "成功为" + this.pl.getName() + "插件注册" + this.startWithCommand + "下的子命令: " + getCommandName(icom) + " §b" + "[将协助此插件更好的处理此命令与tab提示功能!]");
+        }catch (Throwable e){
+            e.printStackTrace();
         }
-        commands.add(icom);
-        System.out.println("§a[HiPlugin]"+"成功为"+this.pl.getName()+"插件注册"+this.startWithCommand+"下的子命令: "+getCommandName(icom)+" §b"+"[将协助此插件更好的处理此命令与tab提示功能!]");
     }
 
     public void removeCommandByName(String com){
@@ -105,7 +109,7 @@ public class HiCommand implements TabExecutor {
                 return Arrays.asList("");
             }
             try {
-                String temp = ic.getArgs().get(args.length - 2);
+                String temp = ic.getArgs().get(args.length - 2).trim();
                 if(temp.contains("/")){
                     return Arrays.asList(temp.split("/"));
                 }

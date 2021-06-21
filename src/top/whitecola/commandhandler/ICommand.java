@@ -1,8 +1,8 @@
 package top.whitecola.commandhandler;
 
+import com.sun.istack.internal.NotNull;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.List;

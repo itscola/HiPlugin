@@ -1,10 +1,10 @@
 package top.whitecola.commands;
 
+import com.sun.istack.internal.NotNull;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
 import top.whitecola.annotations.ItsACommand;
 import top.whitecola.commandhandler.ICommand;
 
@@ -43,7 +43,8 @@ public class SayHi implements ICommand {
     }
 
     @Override
-    public @NotNull List<String> getArgs() {
+    public @NotNull
+    List<String> getArgs() {
         return Arrays.asList("[Player]");
     }
 

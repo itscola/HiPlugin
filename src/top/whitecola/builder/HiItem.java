@@ -77,7 +77,9 @@ public class HiItem {
     }
 
     public HiItem addEnchat(Enchantment enchat,int level,boolean ignoreRestrictions){
-        this.is.getItemMeta().addEnchant(enchat,level,ignoreRestrictions);
+        ItemMeta meta = this.is.getItemMeta();
+        meta.addEnchant(enchat,level,ignoreRestrictions);
+        this.is.setItemMeta(meta);
         return this;
     }
 
@@ -111,5 +113,13 @@ public class HiItem {
 //        this.is.getItemMeta().g;
         return this;
     }
+
+    public HiItem setCustomModelData(int i){
+        ItemMeta meta = this.is.getItemMeta();
+        meta.setCustomModelData(i);
+        this.is.setItemMeta(meta);
+        return this;
+    }
+
 
 }
