@@ -35,4 +35,8 @@ public class HiMsg {
         return false;
     }
 
+    public static void sendPluginMessage(String msg){
+        System.out.println("¡ìc[HiPlugin]"+msg);
+    }
+
 }
