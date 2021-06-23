@@ -7,4 +7,3 @@ Demo2: https://github.com/itscola/ITech
 
 Author：White_cola    
 Chinese language version only at present.    
-The plugin is still under development.    
