@@ -62,18 +62,16 @@ public class HiInventory {
         return this;
     }
 
-    public HiInventory addItem(HiItem ht, Consumer<InventoryClickEvent> clickEvent){
-        addItem(ht.getItem(),null);
-        checkAndDo(ht.getItem(),clickEvent);
+    public HiInventory addItem(HiItem ht){
+        this.inv.addItem(ht.getItem());
+        checkAndDo(ht);
 
         return this;
     }
 
-    public HiInventory setItem(HiItem ht,int index, Consumer<InventoryClickEvent> clickEvent){
+    public HiInventory setItem(HiItem ht,int index){
         this.inv.setItem(index,ht.getItem());
-
-
-        checkAndDo(ht.getItem(),clickEvent);
+        checkAndDo(ht);
 
 
         return this;
@@ -84,6 +82,10 @@ public class HiInventory {
             return true;
         }
         return false;
+    }
+
+    public void checkAndDo(HiItem hiItem){
+        checkAndDo(hiItem.getItem(), hiItem.clickEventConsumer);
     }
 
     public void checkAndDo(ItemStack item,Consumer<InventoryClickEvent> consumer){

@@ -4,14 +4,17 @@ package top.whitecola.builder;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class HiItem {
     public ItemStack is;
+    public Consumer<InventoryClickEvent> clickEventConsumer;
 
     public HiItem(ItemStack is){
         this.is = is;
@@ -118,6 +121,11 @@ public class HiItem {
         ItemMeta meta = this.is.getItemMeta();
         meta.setCustomModelData(i);
         this.is.setItemMeta(meta);
+        return this;
+    }
+
+    public HiItem setInventoryClickEvent(Consumer<InventoryClickEvent> event){
+        this.clickEventConsumer = event;
         return this;
     }
 
