@@ -2,12 +2,16 @@ package top.whitecola.commandhandler;
 
 
 import org.apache.commons.lang.IllegalClassException;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.PluginCommand;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
+import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.Plugin;
 import top.whitecola.annotations.ItsACommand;
+import top.whitecola.utils.CommandUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,11 +22,13 @@ public class HiCommand implements TabExecutor {
     public Vector<ICommand> commands = new Vector<>();
     public String startWithCommand;
     public Plugin pl;
+    private PluginCommand pluginCommand;
     public HiCommand(Plugin pl, String startWithCommand){
         this.pl = pl;
         this.startWithCommand = startWithCommand;
-
+        registerThis(startWithCommand,pl);
     }
+
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -74,6 +80,15 @@ public class HiCommand implements TabExecutor {
     }
 
     public void addCommand(ICommand icom){
+
+       addCommand(icom,"hiplugin.null","op");
+    }
+
+    public void addCommand(ICommand icom,String permission,String permissionDefault){
+
+        pluginCommand.setPermission(permission);
+        pluginCommand.setPermissionMessage(permissionDefault);
+
         try {
             if (!isALegalCommand(icom)) {
                 throw new IllegalClassException("§a[HiPlugin]" + getCommandName(icom) + "类,没有@ItsCommand注释,无法注册! 来源: " + pl.getName() + "插件.");
@@ -84,6 +99,8 @@ public class HiCommand implements TabExecutor {
             e.printStackTrace();
         }
     }
+
+
 
     public void removeCommandByName(String com){
         this.commands.remove(getCommandByName(com));
@@ -167,6 +184,13 @@ public class HiCommand implements TabExecutor {
     }
 
 
-
+    public void registerThis(String prefix,Plugin pl){
+//        CommandUtils.registerCommandToBukkit(startWithCommand,);
+        pluginCommand = CommandUtils.newAPluginCommand(startWithCommand,pl);
+        pluginCommand.setExecutor(pl);
+        pluginCommand.setTabCompleter(pl);
+        pluginCommand.setUsage("/"+prefix +" <commands> [args] ...");
+        CommandUtils.registerCommandToBukkit(prefix,pluginCommand);
+    }
 
 }
