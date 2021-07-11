@@ -81,7 +81,7 @@ public class HiCommand implements TabExecutor {
 
     public void addCommand(ICommand icom){
 
-       addCommand(icom,"hiplugin.null","op");
+       addCommand(icom,pl.getDescription().getName()+".null","op");
     }
 
     public void addCommand(ICommand icom,String permission,String permissionDefault){
