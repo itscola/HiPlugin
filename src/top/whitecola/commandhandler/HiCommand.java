@@ -46,7 +46,7 @@ public class HiCommand implements TabExecutor {
                 sender.sendMessage("§f§l[HiPlugin]>>["+this.pl.getName()+"]§b你没有权限这样做,你需要"+getCommandPremission(ic)+"权限!");
                 return true;
             }
-            Boolean result = false;
+            boolean result = false;
             try {
                 result = ic.onCommand(sender, command, label, args);
             }catch (Throwable e){
@@ -60,9 +60,9 @@ public class HiCommand implements TabExecutor {
                 }
                 sender.sendMessage("§f§l[HiPlugin]>>["+this.pl.getName()+"]§b"+"用法: "+ic.getUsage()+" - "+ic.getUsageDescripition());
                 return true;
-            }else{
-                return true;
             }
+                return true;
+
 
         }
         return false;
@@ -79,6 +79,7 @@ public class HiCommand implements TabExecutor {
         return null;
     }
 
+    @Deprecated
     public void addCommand(ICommand icom){
 
        addCommand(icom,pl.getDescription().getName()+".null","op");

@@ -3,7 +3,6 @@ package top.whitecola.utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.PluginCommand;
-import org.bukkit.command.PluginCommandYamlParser;
 import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.plugin.Plugin;
 
@@ -19,8 +18,6 @@ public class CommandUtils {
             Object commap = comMapField.get(Bukkit.getServer());
             SimpleCommandMap simpleCommandMap = (SimpleCommandMap) commap;
             simpleCommandMap.register(prefix,command);
-
-
 
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
