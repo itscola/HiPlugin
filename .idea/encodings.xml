@@ -24,12 +24,6 @@
     <file url="file://$PROJECT_DIR$/src/top/whitecola/commandhandler/HiCommand.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/top/whitecola/commandhandler/ICommand.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/top/whitecola/commands/SayHi.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/confighandler/DefINI.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/confighandler/HiConfig.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/confighandler/HiINI.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/confighandler/HiMySql.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/confighandler/IData.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/datahandler/HiFile.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/top/whitecola/datahandler/HiStream.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/top/whitecola/datahandler/HiURL.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/top/whitecola/test/Main.java" charset="GBK" />

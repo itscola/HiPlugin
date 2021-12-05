@@ -48,6 +48,7 @@ public class HiCommand implements TabExecutor {
             }
             boolean result = false;
             try {
+
                 result = ic.onCommand(sender, command, label, args);
             }catch (Throwable e){
                 e.printStackTrace();
@@ -79,10 +80,16 @@ public class HiCommand implements TabExecutor {
         return null;
     }
 
-    @Deprecated
     public void addCommand(ICommand icom){
-
-       addCommand(icom,pl.getDescription().getName()+".null","op");
+        try {
+            if (!isALegalCommand(icom)) {
+                throw new IllegalClassException("§a[HiPlugin]" + getCommandName(icom) + "类,没有@ItsCommand注释,无法注册! 来源: " + pl.getName() + "插件.");
+            }
+            commands.add(icom);
+            System.out.println("§a[HiPlugin]" + "成功为" + this.pl.getName() + "插件注册" + this.startWithCommand + "下的子命令: " + getCommandName(icom) + " §b" + "[将协助此插件更好的处理此命令与tab提示功能!]");
+        }catch (Throwable e){
+            e.printStackTrace();
+        }
     }
 
     public void addCommand(ICommand icom,String permission,String permissionDefault){
@@ -120,9 +127,15 @@ public class HiCommand implements TabExecutor {
         }
         if(args.length>1){
             ICommand ic = getCommandByName(args[0]);
+            if(ic==null){
+                return Arrays.asList("");
+            }
+
+
             if(commandSender instanceof Player &&!commandSender.hasPermission(getCommandPremission(ic))){
                 return Arrays.asList("");
             }
+
             if(args.length-1>ic.getArgs().size()){
                 return Arrays.asList("");
             }
@@ -167,6 +180,8 @@ public class HiCommand implements TabExecutor {
     }
 
     public static boolean isALegalCommand(ICommand icom){
+        if(icom == null)
+            return false;
         Class<?> clazz = icom.getClass();
         if(clazz.isAnnotationPresent(ItsACommand.class)){
             if(!clazz.getAnnotation(ItsACommand.class).CommandNmae().equals("")){
