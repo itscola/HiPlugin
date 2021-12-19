@@ -8,9 +8,9 @@ Demo2: https://github.com/itscola/ITech
 Author：White_cola    
 Chinese language version only at present.    
 
-To do:       
-Advanced Command Handler √   
-Items Builder √      
-Items Serialization √      
-Hook another plugin feature ...          
-Hot updating feature ...      
+## To do:       
+### Advanced Command Handler √   
+### Items Builder √      
+### Items Serialization √      
+### Hook another plugin feature ...          
+### Hot updating feature ...      
