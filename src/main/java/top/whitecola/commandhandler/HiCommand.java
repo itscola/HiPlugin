@@ -33,17 +33,17 @@ public class HiCommand implements TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!this.pl.isEnabled()){
-            sender.sendMessage("¡ìf¡ìl[HiPlugin]>>["+this.pl.getName()+"]"+"²å¼ş²¢Ã»ÓĞÆô¶¯,ÎŞ·¨Ê¹ÓÃ´Ë²å¼şµÄÃüÁîÃüÁî!");
+            sender.sendMessage("Â§fÂ§l[HiPlugin]>>["+this.pl.getName()+"]"+"æ’ä»¶å¹¶æ²¡æœ‰å¯åŠ¨,æ— æ³•ä½¿ç”¨æ­¤æ’ä»¶çš„å‘½ä»¤å‘½ä»¤!");
             return true;
         }
         if(args.length>0){
             ICommand ic = this.getCommandByName(args[0]);
             if(ic==null){
-                sender.sendMessage("¡ìf¡ìl[HiPlugin]>>["+this.pl.getName()+"]¡ìbÃ»ÓĞÔÚ"+startWithCommand+"ÃüÁîÖĞ,·¢ÏÖ×ÓÃüÁî"+args[0]+"!");
+                sender.sendMessage("Â§fÂ§l[HiPlugin]>>["+this.pl.getName()+"]Â§bæ²¡æœ‰åœ¨"+startWithCommand+"å‘½ä»¤ä¸­,å‘ç°å­å‘½ä»¤"+args[0]+"!");
                 return true;
             }
             if(!getCommandPremission(ic).trim().equals("") && !sender.hasPermission(getCommandPremission(ic).trim())){
-                sender.sendMessage("¡ìf¡ìl[HiPlugin]>>["+this.pl.getName()+"]¡ìbÄãÃ»ÓĞÈ¨ÏŞÕâÑù×ö,ÄãĞèÒª"+getCommandPremission(ic)+"È¨ÏŞ!");
+                sender.sendMessage("Â§fÂ§l[HiPlugin]>>["+this.pl.getName()+"]Â§bä½ æ²¡æœ‰æƒé™è¿™æ ·åš,ä½ éœ€è¦"+getCommandPremission(ic)+"æƒé™!");
                 return true;
             }
             boolean result = false;
@@ -52,14 +52,14 @@ public class HiCommand implements TabExecutor {
                 result = ic.onCommand(sender, command, label, args);
             }catch (Throwable e){
                 e.printStackTrace();
-                System.out.println("¡ìf¡ìl[HiPlugin]¡ìcÔÚ´¦Àí"+this.pl.getName()+"²å¼şµÄ"+this.startWithCommand+"ÃüÁîµÄ×ÓÃüÁî"+getCommandName(ic)+"Ê±³öÏÖ´íÎó,´íÎóÈÕÖ¾ÒÑ´òÓ¡!");
-                System.out.println("¡ìf¡ìl[HiPlugin]¡ìcÈç¹ûÄãÈÏÎªÄÇÊÇ¸ö´íÎó,ÇëÁªÏµ"+this.pl.getName()+"µÄ¿ª·¢Õß.");
+                System.out.println("Â§fÂ§l[HiPlugin]Â§cåœ¨å¤„ç†"+this.pl.getName()+"æ’ä»¶çš„"+this.startWithCommand+"å‘½ä»¤çš„å­å‘½ä»¤"+getCommandName(ic)+"æ—¶å‡ºç°é”™è¯¯,é”™è¯¯æ—¥å¿—å·²æ‰“å°!");
+                System.out.println("Â§fÂ§l[HiPlugin]Â§cå¦‚æœä½ è®¤ä¸ºé‚£æ˜¯ä¸ªé”™è¯¯,è¯·è”ç³»"+this.pl.getName()+"çš„å¼€å‘è€….");
             }
             if(!result){
                 if(ic.getUsage().trim().equals("") || ic.getUsageDescripition().trim().equals("")){
                     return false;
                 }
-                sender.sendMessage("¡ìf¡ìl[HiPlugin]>>["+this.pl.getName()+"]¡ìb"+"ÓÃ·¨: "+ic.getUsage()+" - "+ic.getUsageDescripition());
+                sender.sendMessage("Â§fÂ§l[HiPlugin]>>["+this.pl.getName()+"]Â§b"+"ç”¨æ³•: "+ic.getUsage()+" - "+ic.getUsageDescripition());
                 return true;
             }
                 return true;
@@ -83,10 +83,10 @@ public class HiCommand implements TabExecutor {
     public void addCommand(ICommand icom){
         try {
             if (!isALegalCommand(icom)) {
-                throw new IllegalClassException("¡ìa[HiPlugin]" + getCommandName(icom) + "Àà,Ã»ÓĞ@ItsCommand×¢ÊÍ,ÎŞ·¨×¢²á! À´Ô´: " + pl.getName() + "²å¼ş.");
+                throw new IllegalClassException("Â§a[HiPlugin]" + getCommandName(icom) + "ç±»,æ²¡æœ‰@ItsCommandæ³¨é‡Š,æ— æ³•æ³¨å†Œ! æ¥æº: " + pl.getName() + "æ’ä»¶.");
             }
             commands.add(icom);
-            System.out.println("¡ìa[HiPlugin]" + "³É¹¦Îª" + this.pl.getName() + "²å¼ş×¢²á" + this.startWithCommand + "ÏÂµÄ×ÓÃüÁî: " + getCommandName(icom) + " ¡ìb" + "[½«Ğ­Öú´Ë²å¼ş¸üºÃµÄ´¦Àí´ËÃüÁîÓëtabÌáÊ¾¹¦ÄÜ!]");
+            System.out.println("Â§a[HiPlugin]" + "æˆåŠŸä¸º" + this.pl.getName() + "æ’ä»¶æ³¨å†Œ" + this.startWithCommand + "ä¸‹çš„å­å‘½ä»¤: " + getCommandName(icom) + " Â§b" + "[å°†ååŠ©æ­¤æ’ä»¶æ›´å¥½çš„å¤„ç†æ­¤å‘½ä»¤ä¸tabæç¤ºåŠŸèƒ½!]");
         }catch (Throwable e){
             e.printStackTrace();
         }
@@ -99,10 +99,10 @@ public class HiCommand implements TabExecutor {
 
         try {
             if (!isALegalCommand(icom)) {
-                throw new IllegalClassException("¡ìa[HiPlugin]" + getCommandName(icom) + "Àà,Ã»ÓĞ@ItsCommand×¢ÊÍ,ÎŞ·¨×¢²á! À´Ô´: " + pl.getName() + "²å¼ş.");
+                throw new IllegalClassException("Â§a[HiPlugin]" + getCommandName(icom) + "ç±»,æ²¡æœ‰@ItsCommandæ³¨é‡Š,æ— æ³•æ³¨å†Œ! æ¥æº: " + pl.getName() + "æ’ä»¶.");
             }
             commands.add(icom);
-            System.out.println("¡ìa[HiPlugin]" + "³É¹¦Îª" + this.pl.getName() + "²å¼ş×¢²á" + this.startWithCommand + "ÏÂµÄ×ÓÃüÁî: " + getCommandName(icom) + " ¡ìb" + "[½«Ğ­Öú´Ë²å¼ş¸üºÃµÄ´¦Àí´ËÃüÁîÓëtabÌáÊ¾¹¦ÄÜ!]");
+            System.out.println("Â§a[HiPlugin]" + "æˆåŠŸä¸º" + this.pl.getName() + "æ’ä»¶æ³¨å†Œ" + this.startWithCommand + "ä¸‹çš„å­å‘½ä»¤: " + getCommandName(icom) + " Â§b" + "[å°†ååŠ©æ­¤æ’ä»¶æ›´å¥½çš„å¤„ç†æ­¤å‘½ä»¤ä¸tabæç¤ºåŠŸèƒ½!]");
         }catch (Throwable e){
             e.printStackTrace();
         }
@@ -116,13 +116,13 @@ public class HiCommand implements TabExecutor {
 
     public void removeAllCommands(){
         this.commands.clear();
-        System.out.println("¡ìa[HiPlugin]ÒÑÎª"+this.pl.getName()+"²å¼şĞ¶ÔØ"+this.pl.getName()+"²å¼şµÄ"+this.startWithCommand+"ÃüÁîÏÂµÄËùÓĞ×ÓÃüÁî!");
+        System.out.println("Â§a[HiPlugin]å·²ä¸º"+this.pl.getName()+"æ’ä»¶å¸è½½"+this.pl.getName()+"æ’ä»¶çš„"+this.startWithCommand+"å‘½ä»¤ä¸‹çš„æ‰€æœ‰å­å‘½ä»¤!");
     }
 
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] args) {
         if(!this.pl.isEnabled()){
-            commandSender.sendMessage("¡ìf¡ìl[HiPlugin]>>["+this.pl.getName()+"]"+"¡ìc²å¼ş²¢Ã»ÓĞÆô¶¯,ÎŞ·¨Ê¹ÓÃ´Ë²å¼şµÄÃüÁîÃüÁî!");
+            commandSender.sendMessage("Â§fÂ§l[HiPlugin]>>["+this.pl.getName()+"]"+"Â§cæ’ä»¶å¹¶æ²¡æœ‰å¯åŠ¨,æ— æ³•ä½¿ç”¨æ­¤æ’ä»¶çš„å‘½ä»¤å‘½ä»¤!");
             return Arrays.asList("");
         }
         if(args.length>1){
@@ -147,10 +147,10 @@ public class HiCommand implements TabExecutor {
                 return ic.handleArg(commandSender,temp);
             }catch (Throwable e){
                 e.printStackTrace();
-                System.out.println("¡ìc[HiPlugin]ÔÚ´¦Àí"+this.pl.getName()+"²å¼şµÄtab¹¦ÄÜÊ±³öÏÖ´íÎó!");
-                System.out.println("¡ìc[HiPlugin]Îª±£Ö¤°²È«ÔËĞĞ,HiPluginÒÑ×Ô¶¯½«´íÎótab¹¦ÄÜÈ¡Ïû!");
-                System.out.println("¡ìc[HiPlugin]Èç¹ûÄúĞèÒª½â¾öÕâ¸ö´íÎó,ÇëÁªÏµ "+this.pl.getName()+"²å¼şµÄ¿ª·¢Õß!");
-                System.out.println("¡ìc[HiPlugin]´íÎóÈÕÖ¾: "+"¡ìa´¦Àí²å¼ş: "+this.pl.getName()+"  ´¦ÀíÃüÁî"+startWithCommand+"µÄ×ÓÃüÁî"+getCommandName(ic)+" ´¦Àí²ÎÊıºÅ: "+(args.length - 2)+" Êµ¼Êarg³¤¶È: "+args.length);
+                System.out.println("Â§c[HiPlugin]åœ¨å¤„ç†"+this.pl.getName()+"æ’ä»¶çš„tabåŠŸèƒ½æ—¶å‡ºç°é”™è¯¯!");
+                System.out.println("Â§c[HiPlugin]ä¸ºä¿è¯å®‰å…¨è¿è¡Œ,HiPluginå·²è‡ªåŠ¨å°†é”™è¯¯tabåŠŸèƒ½å–æ¶ˆ!");
+                System.out.println("Â§c[HiPlugin]å¦‚æœæ‚¨éœ€è¦è§£å†³è¿™ä¸ªé”™è¯¯,è¯·è”ç³» "+this.pl.getName()+"æ’ä»¶çš„å¼€å‘è€…!");
+                System.out.println("Â§c[HiPlugin]é”™è¯¯æ—¥å¿—: "+"Â§aå¤„ç†æ’ä»¶: "+this.pl.getName()+"  å¤„ç†å‘½ä»¤"+startWithCommand+"çš„å­å‘½ä»¤"+getCommandName(ic)+" å¤„ç†å‚æ•°å·: "+(args.length - 2)+" å®é™…argé•¿åº¦: "+args.length);
                 return Arrays.asList("");
             }
         }

@@ -111,7 +111,7 @@ public class HiInventory {
                     consumer.accept(e);
                 }catch (Throwable ee){
                     ee.printStackTrace();
-                    HiMsg.sendPluginMessage("ÔÚ´¦Àí "+pl.getName()+"²å¼şµÄÎïÆ·µã»÷ÊÂ¼şÊ±³öÏÖÎÊÌâ. Òì³£ÒÑ´òÓ¡,ÇëÁªÏµ´Ë²å¼ş×÷Õß.");
+                    HiMsg.sendPluginMessage("åœ¨å¤„ç† "+pl.getName()+"æ’ä»¶çš„ç‰©å“ç‚¹å‡»äº‹ä»¶æ—¶å‡ºç°é—®é¢˜. å¼‚å¸¸å·²æ‰“å°,è¯·è”ç³»æ­¤æ’ä»¶ä½œè€….");
                     return;
                 }
 

@@ -2,7 +2,7 @@
   <artifact type="jar" name="HiPlugin">
     <output-path>$PROJECT_DIR$/out/artifacts/HiPlugin</output-path>
     <root id="archive" name="HiPlugin.jar">
-      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
       <element id="module-output" name="HiPlugin" />
     </root>
   </artifact>

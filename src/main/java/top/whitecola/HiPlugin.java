@@ -6,10 +6,12 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import top.whitecola.commandhandler.HiCommand;
 import top.whitecola.commands.SayHi;
+import top.whitecola.i18n.HiLanguage;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.Vector;
-
+import java.util.function.Function;
 
 public class HiPlugin extends JavaPlugin {
     {
@@ -18,7 +20,7 @@ public class HiPlugin extends JavaPlugin {
     public static HiPlugin instance = null;
     public HiCommand commands;
     public Vector<Plugin> handlePlugins = new Vector<>();
-
+    public static HiLanguage i18n = new HiLanguage("hiplugin", HiPlugin.class::getResource);
     public void registerPlugin(Plugin pl){
         this.handlePlugins.add(pl);
     }
@@ -32,18 +34,18 @@ public class HiPlugin extends JavaPlugin {
     public void onEnable() {
         System.out.println();
         System.out.println();
-        System.out.println("¡ìb"+"  ___ ___  .__  __________ .__                   .__         ");
-        System.out.println("¡ìb"+" /   |   \\ |__| \\______   \\|  |   __ __    ____  |__|  ____  ");
-        System.out.println("¡ìb"+"/    ~    \\|  |  |     ___/|  |  |  |  \\  / ___\\ |  | /    \\ ");
-        System.out.println("¡ìb"+"\\    Y    /|  |  |    |    |  |__|  |  / / /_/  >|  ||   |  \\");
-        System.out.println("¡ìb"+" \\___|_  / |__|  |____|    |____/|____/  \\___  / |__||___|  /");
-        System.out.println("¡ìb"+"       \\/                               /_____/           \\/ ");
+        System.out.println("Â§b"+"  ___ ___  .__  __________ .__                   .__         ");
+        System.out.println("Â§b"+" /   |   \\ |__| \\______   \\|  |   __ __    ____  |__|  ____  ");
+        System.out.println("Â§b"+"/    ~    \\|  |  |     ___/|  |  |  |  \\  / ___\\ |  | /    \\ ");
+        System.out.println("Â§b"+"\\    Y    /|  |  |    |    |  |__|  |  / / /_/  >|  ||   |  \\");
+        System.out.println("Â§b"+" \\___|_  / |__|  |____|    |____/|____/  \\___  / |__||___|  /");
+        System.out.println("Â§b"+"       \\/                               /_____/           \\/ ");
         System.out.println();
-        System.out.println("¡ìb[HiPlugin]¡ìfHiPluginÄÚºË²å¼ş ÒÑÆô¶¯.");
-        System.out.println("¡ìb[HiPlugin]¡ìfÕâÊÇÒ»¸öÇ°ÖÃ²å¼ş,°ïÖúÆäËû¿ª·¢Õß¸üÇáËÉµÄ¿ª·¢²å¼ş,Í¬Ê±Ò²»áÌá¸ß²å¼şĞ§ÂÊºÍÎÈ¶¨ĞÔ.");
-        System.out.println("¡ìb[HiPlugin]¡ìfHiPlugin²å¼ş²»ÊôÓÚÈÎºÎÆäËû²å¼ş·¢²¼Õß,µ«ÔÊĞíÓëÆäËû²å¼şÍ¬Ê±·¢²¼.");
-        System.out.println("¡ìb[HiPlugin]¡ìf×¢Òâ! HiPlugin²å¼ş½öÎªÄÚºË²å¼ş,Èç¹û³öÏÖÎÊÌâ,ÇëÕÒ¶ÔÓ¦²å¼ş×÷Õß!(¶ø²»ÊÇÕÒHiPlugin×÷Õß)");
-        System.out.println("¡ìb[HiPlugin]¡ìfHiPlugin×÷Õß: White_cola");
+        System.out.println("Â§b[HiPlugin]Â§fHiPluginå†…æ ¸æ’ä»¶ å·²å¯åŠ¨.");
+        System.out.println("Â§b[HiPlugin]Â§fè¿™æ˜¯ä¸€ä¸ªå‰ç½®æ’ä»¶,å¸®åŠ©å…¶ä»–å¼€å‘è€…æ›´è½»æ¾çš„å¼€å‘æ’ä»¶,åŒæ—¶ä¹Ÿä¼šæé«˜æ’ä»¶æ•ˆç‡å’Œç¨³å®šæ€§.");
+        System.out.println("Â§b[HiPlugin]Â§fHiPluginæ’ä»¶ä¸å±äºä»»ä½•å…¶ä»–æ’ä»¶å‘å¸ƒè€…,ä½†å…è®¸ä¸å…¶ä»–æ’ä»¶åŒæ—¶å‘å¸ƒ.");
+        System.out.println("Â§b[HiPlugin]Â§fæ³¨æ„! HiPluginæ’ä»¶ä»…ä¸ºå†…æ ¸æ’ä»¶,å¦‚æœå‡ºç°é—®é¢˜,è¯·æ‰¾å¯¹åº”æ’ä»¶ä½œè€…!(è€Œä¸æ˜¯æ‰¾HiPluginä½œè€…)");
+        System.out.println("Â§b[HiPlugin]Â§fHiPluginä½œè€…: White_cola");
         System.out.println();
         System.out.println();
         initCommands();
@@ -61,7 +63,7 @@ public class HiPlugin extends JavaPlugin {
         if(commands!=null){
             commands.removeAllCommands();
         }
-        System.out.println("¡ìbHiPluginÒÑ¹Ø±Õ.");
+        System.out.println("Â§bHiPluginå·²å…³é—­.");
     }
 
 //    @Override

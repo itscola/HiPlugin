@@ -9,10 +9,10 @@ public class HiMsg {
     }
 
     public static void sendDebugMessage(String msg,String[] arg,String command,String callMsg){
-            System.out.println("¡ìl[HiPlugin][debug]¡ìd"+msg+"[Command:"+command+" "+getAllArr(arg)+"][CallMessage]: "+callMsg);
+            System.out.println("Â§l[HiPlugin][debug]Â§d"+msg+"[Command:"+command+" "+getAllArr(arg)+"][CallMessage]: "+callMsg);
     }
     public static void sendDebugMessage(String msg,String callMsg){
-            System.out.println("¡ìl[HiPlugin][debug]¡ìd" + msg + "[CallMessage]: "+callMsg);
+            System.out.println("Â§l[HiPlugin][debug]Â§d" + msg + "[CallMessage]: "+callMsg);
     }
     public static String getAllArr(String[] arr){
         String All = "";
@@ -27,7 +27,7 @@ public class HiMsg {
         for(int i=0;i<index;i++){
             if(arg3[i].equals("")){
                 if(arg0!=null) {
-                    arg0.sendMessage("µÚ" + (i + 1) + "¸ö²ÎÊý,²»ÄÜÎª¿Õ! index :" + i + " ÄÚÈÝÎª :" + arg3[1]);
+                    arg0.sendMessage("ç¬¬" + (i + 1) + "ä¸ªå‚æ•°,ä¸èƒ½ä¸ºç©º! index :" + i + " å†…å®¹ä¸º :" + arg3[1]);
                 }
                 return true;
             }
@@ -36,7 +36,7 @@ public class HiMsg {
     }
 
     public static void sendPluginMessage(String msg){
-        System.out.println("¡ìc[HiPlugin]"+msg);
+        System.out.println("Â§c[HiPlugin]"+msg);
     }
 
 }

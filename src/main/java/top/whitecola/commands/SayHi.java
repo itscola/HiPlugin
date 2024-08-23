@@ -24,19 +24,19 @@ public class SayHi implements ICommand {
         Player target = Bukkit.getPlayer(args[1]);
         if(target!=null&&target.isOnline()){
             if(commandSender.getName().equalsIgnoreCase(args[1])){
-                commandSender.sendMessage("²»ÄÜÏò×Ô¼ºÎÊºÃ!");
+                commandSender.sendMessage("ä¸èƒ½å‘è‡ªå·±é—®å¥½!");
                 return true;
             }
-            commandSender.sendMessage("ÒÑÏò"+target.getName()+"ÎÊºÃ!");
+            commandSender.sendMessage("å·²å‘"+target.getName()+"é—®å¥½!");
             if(commandSender instanceof Player){
-                target.sendMessage("Íæ¼Ò"+commandSender.getName()+"ÏòÄãÎÊºÃ!");
+                target.sendMessage("ç©å®¶"+commandSender.getName()+"å‘ä½ é—®å¥½!");
                 return true;
             }else{
-                target.sendMessage("·şÎñÆ÷"+"ÏòÄãÎÊºÃ!");
+                target.sendMessage("æœåŠ¡å™¨"+"å‘ä½ é—®å¥½!");
                 return true;
             }
         }else{
-            commandSender.sendMessage("Íæ¼Ò"+args[0]+"²»´æÔÚ»ò²»ÔÚÏß!");
+            commandSender.sendMessage("ç©å®¶"+args[0]+"ä¸å­˜åœ¨æˆ–ä¸åœ¨çº¿!");
             return true;
         }
 
@@ -71,7 +71,7 @@ public class SayHi implements ICommand {
 
     @Override
     public @NotNull String getUsageDescripition() {
-        return "ÏòÖ¸¶¨Íæ¼ÒÎÊºÃ";
+        return "å‘æŒ‡å®šç©å®¶é—®å¥½";
     }
 
 

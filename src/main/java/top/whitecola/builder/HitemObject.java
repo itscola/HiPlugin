@@ -34,11 +34,11 @@ public class HitemObject {
 //                ops.close();
 //            } catch (IOException e) {
 //                e.printStackTrace();
-//                System.out.println("¡ìb[HiPlugin]¡ìr[HitemObject]>>>ÔÚÎª"+pl.getName()+"²å¼ş´´½¨ÎïÆ·´æ´¢Ê±³öÏÖ´íÎó,´íÎóÒÑ´òÓ¡!");
-//                System.out.println("[HiPlugin]ÈÕÖ¾: µ÷ÓÃ²å¼şÃü:"+pl.getName()+" ´´½¨ÎïÆ·´¢´æÃû: "+ht.getItemMeta().getDisplayName()+" Ä¿±êÂ·¾¶: "+pl.getDataFolder()+"/HiPlugin_Hitems/"+"_"+id+".hitem");
+//                System.out.println("Â§b[HiPlugin]Â§r[HitemObject]>>>åœ¨ä¸º"+pl.getName()+"æ’ä»¶åˆ›å»ºç‰©å“å­˜å‚¨æ—¶å‡ºç°é”™è¯¯,é”™è¯¯å·²æ‰“å°!");
+//                System.out.println("[HiPlugin]æ—¥å¿—: è°ƒç”¨æ’ä»¶å‘½:"+pl.getName()+" åˆ›å»ºç‰©å“å‚¨å­˜å: "+ht.getItemMeta().getDisplayName()+" ç›®æ ‡è·¯å¾„: "+pl.getDataFolder()+"/HiPlugin_Hitems/"+"_"+id+".hitem");
 //            }
 //        }else{
-//            throw new RuntimeException("[HiPlugin]>>>["+pl.getName()+"]"+"ÎïÆ·id: "+id+" ÒÑ´æÔÚ!");
+//            throw new RuntimeException("[HiPlugin]>>>["+pl.getName()+"]"+"ç‰©å“id: "+id+" å·²å­˜åœ¨!");
 //        }
 //
 //
@@ -60,7 +60,7 @@ public class HitemObject {
 //                }
 //            } catch (IOException e) {
 //                e.printStackTrace();
-//                System.out.println("[HiPlugin]: "+pl.getName()+"²å¼şÔÚ»ñÈ¡idÎª"+id+"µÄÎïÆ·Ê±»ñÈ¡Ê§°Ü! ÕÒ²»µ½Ä¿±êÎÄ¼ş");
+//                System.out.println("[HiPlugin]: "+pl.getName()+"æ’ä»¶åœ¨è·å–idä¸º"+id+"çš„ç‰©å“æ—¶è·å–å¤±è´¥! æ‰¾ä¸åˆ°ç›®æ ‡æ–‡ä»¶");
 //            }
 //        }
 //        return null;
