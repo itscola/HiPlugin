@@ -1,6 +1,6 @@
 package top.whitecola.commandhandler;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 

@@ -42,7 +42,18 @@ public class HiLanguage {
             if(language.containsKey(key))
                 return language.get(key);
         } catch (IOException e) {
-            e.printStackTrace();
+            try {
+                String locale = "en_US"; //Set to default language;
+                InputStreamReader resource = new InputStreamReader(resourceGetter.getResource("assets/" + namespace + "/lang/" + locale + ".json").openStream());
+                Type languageType = new TypeToken<Map<String, String>>(){}.getType();
+                Gson gson = new Gson();
+                Map<String, String> language = gson.fromJson(resource, languageType);
+                resource.close();
+                if(language.containsKey(key))
+                    return language.get(key);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
         return key;
     }

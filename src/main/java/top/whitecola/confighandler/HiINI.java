@@ -54,7 +54,7 @@ public class HiINI implements IData{
             psp.load(new FileInputStream(file));
             this.map = INIToMap(psp,defINI);
         }else{
-            System.out.println("§b[HiPlugin>>HiINI]即将为您创建"+this.file.getName()+"配置文件!");
+            System.out.println("搂b[HiPlugin>>HiINI]鍗冲皢涓烘偍鍒涘缓"+this.file.getName()+"閰嶇疆鏂囦欢!");
             psp = mapToINI(DefINI.map);
             saveConfig();
         }

@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'top.whitecola'
-version = '1.0-GRADLED'
+version = '3.4-Alpha-Hotfix'
 
 repositories {
     mavenCentral()
@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:${project.spigot_version}"
+    implementation 'org.jetbrains:annotations:24.0.1'
 }
 
 tasks.withType(JavaCompile) {

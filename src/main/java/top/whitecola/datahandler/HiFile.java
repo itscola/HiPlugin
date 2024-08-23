@@ -19,7 +19,7 @@ public class HiFile {
 
 
     public static void writeFile(byte[] data,File file,boolean append) throws IOException{
-        //appendÎªfalseÊ± ¸²¸ÇÎÄ¼þ
+        //appendä¸ºfalseæ—¶ è¦†ç›–æ–‡ä»¶
 
         if(!file.getParentFile().exists()){
             file.getParentFile().mkdirs();
