@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/HiPlugin.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/PluginHandler/HiMsg.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/basic/BukkitPlugin.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/basic/HiColor.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/basic/HiRepeat.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/basic/HiSafe.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiEntity.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiInventorySerialization.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiItemNBT.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiItemSerialization.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiObeject.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiPlayer.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiReflect.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/bridges/HiWorld.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/builder/HiGUI.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/builder/HiInventory.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/builder/HiItem.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/builder/HitemObject.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/builder/IGUI.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/classhandler/HiClass.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/commandhandler/HiCommand.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/commandhandler/ICommand.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/commands/SayHi.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/datahandler/HiStream.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/datahandler/HiURL.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/test/Main.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/threader/HiThread.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/threader/HiTimer.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/top/whitecola/threader/Timer.java" charset="GBK" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/build.gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gradlew" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gradlew.bat" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/HiPlugin.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/PluginHandler/HiMsg.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/basic/HiColor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/builder/HiInventory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/builder/HitemObject.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/classhandler/HiClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/commandhandler/HiCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/commands/SayHi.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/confighandler/HiConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/threader/HiThread.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/threader/HiTimer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/utils/CollectionUtils.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

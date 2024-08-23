@@ -10,7 +10,7 @@ public class HiTimer {
     Vector<Timer> ts = new Vector<>();
     public HiTimer(String timerId){
         th = new Thread(()->{
-            HiMsg.makeDebugMsgAndSend("ÒÑ¿ªÆô"+timerId+"!");
+            HiMsg.makeDebugMsgAndSend("å·²å¼€å¯"+timerId+"!");
             while(true){
                 try {
                     ts.forEach(t->{

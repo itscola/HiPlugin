@@ -37,7 +37,7 @@ public class HiConfig<T> implements IData<T>{
             loadConfig();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("ÎÄ¼ş¼ÓÔØÊ§°Ü!");
+            System.out.println("æ–‡ä»¶åŠ è½½å¤±è´¥!");
         }
     }
     @Override
@@ -49,7 +49,7 @@ public class HiConfig<T> implements IData<T>{
             HiFile.writeTextToFile(g.toJson(this.config,this.configClass),this.file,false,this.charset);
         } catch (Throwable e) {
             e.printStackTrace();
-            HiMsg.makeDebugMsgAndSend("ÅäÖÃ(´¢´æ)ÎÄ¼ş"+this.file.getName()+"ÔÚ±£´æÊ±³ö´í.");
+            HiMsg.makeDebugMsgAndSend("é…ç½®(å‚¨å­˜)æ–‡ä»¶"+this.file.getName()+"åœ¨ä¿å­˜æ—¶å‡ºé”™.");
         }
 
     }
@@ -59,14 +59,14 @@ public class HiConfig<T> implements IData<T>{
         if(this.file.getParentFile().exists()&&file.isFile()){
             this.config =  g.fromJson(HiFile.readTextFromFile(file,charset), this.configClass);
             if(this.config ==null){
-                System.out.println("¡ìb[HiPlugin>>HiConfig]Îª"+this.pl.getName()+"²å¼ş ¼ÓÔØÅäÖÃ(´¢´æ)ÎÄ¼ş"+file.getName()+"Ê§°Ü,½«Ê¹ÓÃÄ¬ÈÏÅäÖÃ!Çë¼ì²éÄãÉèÖÃµÄÅäÖÃÎÄ¼ş.");
+                System.out.println("Â§b[HiPlugin>>HiConfig]ä¸º"+this.pl.getName()+"æ’ä»¶ åŠ è½½é…ç½®(å‚¨å­˜)æ–‡ä»¶"+file.getName()+"å¤±è´¥,å°†ä½¿ç”¨é»˜è®¤é…ç½®!è¯·æ£€æŸ¥ä½ è®¾ç½®çš„é…ç½®æ–‡ä»¶.");
                 config = getDefConfig();
             }else{
-                System.out.println("¡ìa[HiPlugin>>HiConfig]ÒÑ³É¹¦Îª"+this.pl.getName()+"²å¼ş ¼ÓÔØ"+file.getName()+"ÅäÖÃÎÄ¼ş!");
+                System.out.println("Â§a[HiPlugin>>HiConfig]å·²æˆåŠŸä¸º"+this.pl.getName()+"æ’ä»¶ åŠ è½½"+file.getName()+"é…ç½®æ–‡ä»¶!");
 
             }
         }else{
-            System.out.println("¡ìb[HiPlugin>>HiConfig]¼´½«ÎªÄú´´½¨"+this.pl.getName()+"²å¼şµÄ "+this.file.getName()+"ÅäÖÃ(´¢´æ)ÎÄ¼ş!");
+            System.out.println("Â§b[HiPlugin>>HiConfig]å³å°†ä¸ºæ‚¨åˆ›å»º"+this.pl.getName()+"æ’ä»¶çš„ "+this.file.getName()+"é…ç½®(å‚¨å­˜)æ–‡ä»¶!");
             config = getDefConfig();
             saveConfig();
         }
@@ -104,7 +104,7 @@ public class HiConfig<T> implements IData<T>{
             this.loadConfig();
             this.saveConfig();
         } catch (IOException e) {
-            System.out.println("¡ìb[HiPlugin>>HiConfig]ÖØÔØ"+this.pl.getName()+"²å¼şµÄ"+this.file.getName()+"ÅäÖÃ(´¢´æ)ÎÄ¼şÊ±Ê§°Ü!");
+            System.out.println("Â§b[HiPlugin>>HiConfig]é‡è½½"+this.pl.getName()+"æ’ä»¶çš„"+this.file.getName()+"é…ç½®(å‚¨å­˜)æ–‡ä»¶æ—¶å¤±è´¥!");
         }
     }
 
@@ -112,7 +112,7 @@ public class HiConfig<T> implements IData<T>{
     public void checkConfigs(){
         ArrayList<String> al = checkConfig();
         if(!al.isEmpty()){
-            System.out.println("¡ìc¡ìl[HiPlugin>>debug]¼ì²âµ½ÓĞÑ¡ÏîÎªnull,±»ÍĞ¹Ü²å¼ş:"+this.pl.getName()+" Î»ÖÃ:"+file.getName()+"ÅäÖÃÎÄ¼şµÄ"+al.toString()+"Ñ¡Ïî,Èç¹ûÎŞÊÓ,¿ÉÄÜ»áµ¼ÖÂ²å¼şÔËĞĞÊ±·¢Éú´íÎó!");
+            System.out.println("Â§cÂ§l[HiPlugin>>debug]æ£€æµ‹åˆ°æœ‰é€‰é¡¹ä¸ºnull,è¢«æ‰˜ç®¡æ’ä»¶:"+this.pl.getName()+" ä½ç½®:"+file.getName()+"é…ç½®æ–‡ä»¶çš„"+al.toString()+"é€‰é¡¹,å¦‚æœæ— è§†,å¯èƒ½ä¼šå¯¼è‡´æ’ä»¶è¿è¡Œæ—¶å‘ç”Ÿé”™è¯¯!");
         }
     }
 

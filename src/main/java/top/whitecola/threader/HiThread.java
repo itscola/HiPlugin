@@ -26,7 +26,7 @@ public class HiThread {
                             return;
                         }
                         e.printStackTrace();
-                        System.out.println("¡ìe[HiPlugin>>HiThread]"+hiThreadId+"µÄÏß³ÌÔËĞĞÊ±³öÏÖÎÊÌâ,ÒÑ´òÓ¡.");
+                        System.out.println("Â§e[HiPlugin>>HiThread]"+hiThreadId+"çš„çº¿ç¨‹è¿è¡Œæ—¶å‡ºç°é—®é¢˜,å·²æ‰“å°.");
                     }
                 }
 

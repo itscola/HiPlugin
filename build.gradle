@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'top.whitecola'
+version = '1.0-GRADLED'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'spigot-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compileOnly "org.spigotmc:spigot-api:${project.spigot_version}"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+

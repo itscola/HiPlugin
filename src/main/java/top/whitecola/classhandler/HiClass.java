@@ -22,7 +22,7 @@ public class HiClass {
 
         }catch (Throwable e){
             e.printStackTrace();
-            System.out.println("¡ì4¶ÁÈ¡°üÊ±·¢Éú´íÎó,´íÎóÒÑ´òÓ¡µ½¿ØÖÆÌ¨!");
+            System.out.println("Â§4è¯»å–åŒ…æ—¶å‘ç”Ÿé”™è¯¯,é”™è¯¯å·²æ‰“å°åˆ°æ§åˆ¶å°!");
         }
 
         return clazzs;
