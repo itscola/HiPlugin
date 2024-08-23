@@ -4,6 +4,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import top.whitecola.commandhandler.HiCommand;
 import top.whitecola.commands.SayHi;
 import top.whitecola.i18n.HiLanguage;
@@ -51,7 +53,10 @@ public class HiPlugin extends JavaPlugin {
         initCommands();
     }
 
-
+    @Override
+    public @Nullable InputStream getResource(@NotNull String filename) {
+        return super.getResource(filename);
+    }
 
     public void initCommands(){
         commands = new HiCommand(HiPlugin.instance,"hip");

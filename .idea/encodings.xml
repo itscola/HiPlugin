@@ -14,6 +14,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/commandhandler/HiCommand.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/commands/SayHi.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/confighandler/HiConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/confighandler/HiINI.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/datahandler/HiFile.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/threader/HiThread.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/threader/HiTimer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/top/whitecola/utils/CollectionUtils.java" charset="UTF-8" />
